@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MucleTherapyMVC.Web.App_Start;
 
 namespace MucleTherapyMVC.Web
 {
@@ -12,6 +13,10 @@ namespace MucleTherapyMVC.Web
     {
         protected void Application_Start()
         {
+
+            //Setup structuremap
+            StructureMapMVC.Start();
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

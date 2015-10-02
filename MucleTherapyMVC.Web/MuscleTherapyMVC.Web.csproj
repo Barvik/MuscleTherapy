@@ -40,6 +40,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -158,12 +166,18 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\StructureMapMVC.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Identity\MuscleTherapyUserManager.cs" />
+    <Compile Include="Identity\MuscleTherapyUser.cs" />
+    <Compile Include="Identity\MuscleTherapyUserStore.cs" />
+    <Compile Include="Infrastructure\IdenityRegistry.cs" />
+    <Compile Include="Infrastructure\SctructureMapContainer.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -236,6 +250,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MucleTherapyMVC.Common\MuscleTherapyMVC.Common.csproj">
+      <Project>{3D25AFED-A213-44CB-BDD6-F39AB678CA0C}</Project>
+      <Name>MuscleTherapyMVC.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

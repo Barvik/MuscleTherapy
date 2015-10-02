@@ -6,7 +6,7 @@ namespace MucleTherapyMVC.Web.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
     }
 
@@ -42,16 +42,16 @@ namespace MucleTherapyMVC.Web.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -66,7 +66,7 @@ namespace MucleTherapyMVC.Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
 
         [Required]
@@ -85,7 +85,7 @@ namespace MucleTherapyMVC.Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
 
         [Required]
@@ -106,7 +106,7 @@ namespace MucleTherapyMVC.Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
     }
 }
